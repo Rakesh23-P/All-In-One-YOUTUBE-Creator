@@ -1,0 +1,115 @@
+.sidebar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  bottom: 0;
+  width: 260px;
+  border-radius: 0;
+  border: none;
+  border-right: 1px solid var(--glass-border);
+  padding: 1.5rem 1rem;
+  z-index: 999;
+  background: rgba(8, 11, 17, 0.85);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  overflow-y: auto;
+}
+
+.sidebar-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.sidebar-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.8rem 1rem;
+  border-radius: var(--border-radius-sm);
+  font-weight: 550;
+  font-size: 0.95rem;
+  transition: var(--transition-fast);
+}
+
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
+  transform: translateX(3px);
+}
+
+.sidebar-link.active {
+  background: var(--primary-gradient);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 0, 85, 0.2);
+}
+
+.sidebar-link.active .sidebar-icon {
+  color: white;
+}
+
+.sidebar-icon {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+.sidebar-link:hover .sidebar-icon {
+  color: var(--primary);
+}
+
+.admin-sidebar-section {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.admin-divider-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  margin-bottom: 0.75rem;
+  padding-left: 1rem;
+}
+
+.admin-link.active {
+  background: var(--secondary-gradient);
+  box-shadow: 0 4px 15px rgba(0, 242, 254, 0.2);
+}
+
+.admin-link:hover .sidebar-icon {
+  color: var(--secondary);
+}
+
+/* Responsive sidebar configuration */
+@media (max-width: 992px) {
+  .sidebar {
+    width: 80px;
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .sidebar-label, .admin-divider-label {
+    display: none;
+  }
+  
+  .sidebar-link {
+    justify-content: center;
+    padding: 0.8rem 0;
+  }
+  
+  .sidebar-link:hover {
+    transform: none;
+  }
+
+  .sidebar-icon {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    display: none; /* Hide on mobile devices, or build mobile overlay dropdown */
+  }
+}

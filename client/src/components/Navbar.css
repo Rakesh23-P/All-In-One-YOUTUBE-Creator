@@ -1,0 +1,133 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0;
+  border-bottom: 1px solid var(--glass-border);
+  z-index: 1000;
+  background: rgba(8, 11, 17, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.navbar-left .logo {
+  text-decoration: none;
+  font-family: var(--font-title);
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+}
+
+.youtube-logo-icon {
+  color: var(--primary);
+  font-size: 1.8rem;
+  filter: drop-shadow(0 0 8px var(--primary-glow));
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-icon-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition-fast);
+}
+
+.nav-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.sun-icon {
+  color: var(--accent);
+}
+
+.moon-icon {
+  color: var(--secondary);
+}
+
+.notification-link {
+  position: relative;
+  text-decoration: none;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--primary);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.15rem 0.35rem;
+  border-radius: 9999px;
+  transform: translate(25%, -25%);
+  box-shadow: 0 0 5px var(--primary-glow);
+}
+
+.user-profile-widget {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-left: 1px solid var(--glass-border);
+  padding-left: 1.25rem;
+}
+
+.profile-link {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 550;
+  font-size: 0.9rem;
+  transition: var(--transition-fast);
+}
+
+.profile-link:hover {
+  color: var(--primary);
+}
+
+.nav-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--primary);
+}
+
+.default-avatar-icon {
+  font-size: 2rem;
+  color: var(--text-secondary);
+}
+
+.nav-username {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 576px) {
+  .nav-username {
+    display: none;
+  }
+  .navbar {
+    padding: 0 1rem;
+  }
+}
