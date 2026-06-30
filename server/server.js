@@ -25,7 +25,7 @@ app.use(helmet({
   crossOriginResourcePolicy: false // Allows loading local file uploads from frontend
 }));
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
+  origin: process.env.CLIENT_URL || 'http://localhost:5173' || 'https://all-in-one-youtube-creator-vsgv.vercel.app',
   credentials: true
 }));
 app.use(express.json());
