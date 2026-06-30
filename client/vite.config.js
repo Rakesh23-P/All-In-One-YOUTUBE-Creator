@@ -8,12 +8,12 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'https://all-in-one-youtube-creator.onrender.com/',
+        target: 'https://all-in-one-youtube-creator.onrender.com',
         changeOrigin: true,
         secure: false,
       },
       '/uploads': {
-        target: 'https://all-in-one-youtube-creator.onrender.com/',
+        target: 'https://all-in-one-youtube-creator.onrender.com',
         changeOrigin: true,
         secure: false,
       }
